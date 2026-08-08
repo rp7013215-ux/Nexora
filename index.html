@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nexora | Tecnología que transforma tu experiencia</title>
-
-    <meta name="description" content="Nexora - Tecnología seleccionada para transformar tu experiencia.">
+    <title>Nexora | Innovation of Technology</title>
 
     <style>
         * {
@@ -20,39 +18,39 @@
         }
 
         body {
-            body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #000000;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.5;
         }
 
-        /* ---------- HEADER ---------- */
+        /* HEADER */
 
-            header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 74px;
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 74px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-    padding: 0 7%;
+            padding: 0 7%;
 
-    background: #ffffff;
+            background: #ffffff;
 
-    border-bottom: 1px solid #000000;
+            border-bottom: 1px solid #000000;
 
-    z-index: 1000;
-}
+            z-index: 1000;
         }
 
         .logo {
             font-size: 22px;
             font-weight: 800;
             letter-spacing: 4px;
+            color: #000000;
         }
 
         nav {
@@ -61,17 +59,17 @@
         }
 
         nav a {
-            color:#555555; 
+            color: #444444;
             text-decoration: none;
             font-size: 14px;
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #000000; 
+            color: #000000;
         }
 
-        /* ---------- HERO ---------- */
+        /* HERO */
 
         .hero {
             min-height: 100vh;
@@ -85,62 +83,57 @@
             padding: 120px 20px 80px;
 
             background: #ffffff;
-                
-       
-
-        .hero-content {
-            max-width: 850px;
         }
 
-        .eyebrow {
-            color: #8d8d8d;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            font-size: 11px;
-            margin-bottom: 24px;
+        .hero-content {
+            width: 100%;
+            max-width: 1000px;
         }
 
         .hero h1 {
-            font-size: clamp(60px, 11vw, 140px);
-            letter-spacing: 10px;
+            font-size: clamp(65px, 12vw, 150px);
+            letter-spacing: 12px;
             font-weight: 800;
-            line-height: 0.95;
-            margin-bottom: 30px;
+            line-height: 0.9;
+            margin-bottom: 28px;
+            color: #000000;
         }
 
         .hero p {
-            color: #b5b5b5;
+            color: #000000;
             font-size: clamp(18px, 3vw, 25px);
+            font-weight: 400;
+            letter-spacing: 1px;
             margin-bottom: 40px;
         }
 
-    .button {
-    display: inline-block;
+        /* BUTTON */
 
-    padding: 14px 28px;
+        .button {
+            display: inline-block;
 
-    background: #e5e5e5;
-    color: #555555;
+            padding: 14px 28px;
 
-    text-decoration: none;
+            background: #e5e5e5;
+            color: #555555;
 
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
+            text-decoration: none;
 
-    border-radius: 4px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
 
-    transition:
-        transform 0.3s,
-        background 0.3s;
-}
+            border-radius: 4px;
+
+            transition: 0.3s;
+        }
 
         .button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(255,255,255,0.12);
+            background: #d5d5d5;
         }
 
-        /* ---------- SECTIONS ---------- */
+        /* SECTIONS */
 
         section {
             padding: 110px 7%;
@@ -163,20 +156,22 @@
         .section-title h2 {
             font-size: clamp(32px, 5vw, 55px);
             letter-spacing: -1px;
+            color: #000000;
         }
 
-        /* ---------- FEATURED PRODUCT ---------- */
+        /* PRODUCTO PRINCIPAL */
 
         .featured {
+            width: 100%;
             max-width: 1100px;
             margin: auto;
 
             display: grid;
             grid-template-columns: 1fr 1fr;
 
-            background: #111111;
+            background: #f5f5f5;
 
-            border: 1px solid #202020;
+            border: 1px solid #dddddd;
             border-radius: 18px;
 
             overflow: hidden;
@@ -189,19 +184,14 @@
             align-items: center;
             justify-content: center;
 
-            background:
-                radial-gradient(
-                    circle,
-                    #242424 0%,
-                    #111111 55%,
-                    #0c0c0c 100%
-                );
+            background: #eeeeee;
 
             font-size: 100px;
         }
 
         .product-info {
             padding: 55px;
+
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -217,10 +207,11 @@
         .product-info h3 {
             font-size: 40px;
             margin: 15px 0;
+            color: #000000;
         }
 
         .product-info p {
-            color: #999999;
+            color: #666666;
             margin-bottom: 28px;
         }
 
@@ -228,10 +219,10 @@
             display: inline-block;
             width: fit-content;
 
-            border: 1px solid #333333;
+            border: 1px solid #cccccc;
             padding: 7px 12px;
 
-            color: #cccccc;
+            color: #555555;
 
             font-size: 11px;
             text-transform: uppercase;
@@ -240,14 +231,16 @@
             margin-bottom: 25px;
         }
 
-        /* ---------- COMING SOON ---------- */
+        /* PRODUCTOS PRÓXIMAMENTE */
 
         .products-grid {
+            width: 100%;
             max-width: 1200px;
             margin: auto;
 
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+
             gap: 18px;
         }
 
@@ -256,9 +249,9 @@
 
             min-height: 300px;
 
-            background: #101010;
+            background: #f7f7f7;
 
-            border: 1px solid #202020;
+            border: 1px solid #dddddd;
             border-radius: 14px;
 
             padding: 25px;
@@ -274,21 +267,21 @@
 
         .product-card:hover {
             transform: translateY(-5px);
-            border-color: #353535;
+            border-color: #aaaaaa;
         }
 
         .card-icon {
             position: absolute;
 
-            top: 50%;
+            top: 45%;
             left: 50%;
 
-            transform: translate(-50%, -65%);
+            transform: translate(-50%, -50%);
 
             font-size: 65px;
 
             filter: grayscale(1);
-            opacity: 0.7;
+            opacity: 0.45;
         }
 
         .lock {
@@ -297,41 +290,44 @@
             right: 18px;
 
             font-size: 13px;
-            color: #666666;
+            color: #777777;
         }
 
         .product-card h3 {
             font-size: 20px;
             margin-bottom: 5px;
+            color: #000000;
         }
 
         .product-card p {
-            color: #666666;
+            color: #777777;
             font-size: 12px;
         }
 
-        /* ---------- WHY NEXORA ---------- */
+        /* POR QUÉ NEXORA */
 
         .features {
+            width: 100%;
             max-width: 1100px;
             margin: auto;
 
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+
             gap: 20px;
         }
 
         .feature {
             padding: 35px;
 
-            background: #0e0e0e;
+            background: #f7f7f7;
 
-            border: 1px solid #1e1e1e;
+            border: 1px solid #dddddd;
             border-radius: 12px;
         }
 
         .feature-number {
-            color: #555555;
+            color: #999999;
             font-size: 12px;
             margin-bottom: 30px;
         }
@@ -339,6 +335,7 @@
         .feature h3 {
             font-size: 20px;
             margin-bottom: 10px;
+            color: #000000;
         }
 
         .feature p {
@@ -346,13 +343,13 @@
             font-size: 14px;
         }
 
-        /* ---------- INSTAGRAM ---------- */
+        /* INSTAGRAM */
 
         .instagram {
             text-align: center;
 
-            border-top: 1px solid #151515;
-            border-bottom: 1px solid #151515;
+            border-top: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
         }
 
         .instagram p {
@@ -361,7 +358,7 @@
             max-width: 500px;
         }
 
-        /* ---------- FOOTER ---------- */
+        /* FOOTER */
 
         footer {
             padding: 50px 7%;
@@ -370,17 +367,17 @@
             justify-content: space-between;
             align-items: center;
 
-            color: #555555;
+            color: #777777;
 
             font-size: 12px;
         }
 
         footer strong {
-            color: #ffffff;
+            color: #000000;
             letter-spacing: 3px;
         }
 
-        /* ---------- RESPONSIVE ---------- */
+        /* CELULAR */
 
         @media (max-width: 800px) {
 
@@ -450,8 +447,6 @@
 
 <body>
 
-    <!-- HEADER -->
-
     <header>
 
         <div class="logo">
@@ -467,17 +462,15 @@
     </header>
 
 
-    <!-- HERO -->
-
     <section class="hero" id="inicio">
 
         <div class="hero-content">
 
             <h1>NEXORA</h1>
 
-<p>
-    Inovation of Technology
-</p>
+            <p>
+                Innovation of Technology
+            </p>
 
             <a href="#productos" class="button">
                 VER PRODUCTOS
@@ -487,8 +480,6 @@
 
     </section>
 
-
-    <!-- PRODUCTO DESTACADO -->
 
     <section id="productos">
 
@@ -506,7 +497,6 @@
             <div class="product-image">
                 🎧
             </div>
-
 
             <div class="product-info">
 
@@ -533,8 +523,6 @@
 
     </section>
 
-
-    <!-- PRÓXIMAMENTE -->
 
     <section>
 
@@ -605,8 +593,6 @@
     </section>
 
 
-    <!-- POR QUÉ NEXORA -->
-
     <section>
 
         <div class="section-title">
@@ -666,8 +652,6 @@
     </section>
 
 
-    <!-- INSTAGRAM / CONTACTO -->
-
     <section class="instagram" id="contacto">
 
         <div class="section-title">
@@ -694,8 +678,6 @@
     </section>
 
 
-    <!-- FOOTER -->
-
     <footer>
 
         <strong>NEXORA</strong>
@@ -705,7 +687,6 @@
         </span>
 
     </footer>
-
 
 </body>
 </html>
