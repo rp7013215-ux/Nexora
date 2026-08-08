@@ -6,7 +6,14 @@
 
     <title>Nexora | Innovation of Technology</title>
 
+    <meta name="description" content="Nexora — Innovation of Technology. Tecnología seleccionada para transformar tu experiencia.">
+
     <style>
+
+        /* =========================
+           CONFIGURACIÓN GENERAL
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -22,9 +29,17 @@
             background: #ffffff;
             color: #000000;
             line-height: 1.5;
+            overflow-x: hidden;
         }
 
-        /* HEADER */
+        a {
+            color: inherit;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             position: fixed;
@@ -39,11 +54,13 @@
 
             padding: 0 7%;
 
-            background: #ffffff;
+            background: rgba(255,255,255,0.94);
 
             border-bottom: 1px solid #000000;
 
             z-index: 1000;
+
+            backdrop-filter: blur(10px);
         }
 
         .logo {
@@ -62,14 +79,45 @@
             color: #444444;
             text-decoration: none;
             font-size: 14px;
-            transition: 0.3s;
+
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
             color: #000000;
         }
 
-        /* HERO */
+
+        /* =========================
+           BARRA DE LANZAMIENTO
+        ========================= */
+
+        .announcement {
+            position: fixed;
+
+            top: 74px;
+            left: 0;
+
+            width: 100%;
+
+            background: #000000;
+            color: #ffffff;
+
+            text-align: center;
+
+            padding: 9px 15px;
+
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            z-index: 999;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             min-height: 100vh;
@@ -80,34 +128,86 @@
 
             text-align: center;
 
-            padding: 120px 20px 80px;
+            padding: 160px 20px 100px;
 
             background: #ffffff;
         }
 
         .hero-content {
             width: 100%;
-            max-width: 1000px;
+            max-width: 1100px;
+
+            animation: heroAppear 1s ease forwards;
+        }
+
+        @keyframes heroAppear {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* ESPACIO PARA LA N DEL LOGO */
+
+        .logo-symbol {
+            width: 90px;
+            height: 90px;
+
+            margin: 0 auto 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #dddddd;
+
+            border-radius: 50%;
+
+            color: #777777;
+
+            font-size: 11px;
+            letter-spacing: 1px;
+
+            /* Después ponemos acá la N real */
         }
 
         .hero h1 {
             font-size: clamp(65px, 12vw, 150px);
+
             letter-spacing: 12px;
+
             font-weight: 800;
+
             line-height: 0.9;
+
             margin-bottom: 28px;
+
             color: #000000;
         }
 
         .hero p {
             color: #000000;
+
             font-size: clamp(18px, 3vw, 25px);
+
             font-weight: 400;
+
             letter-spacing: 1px;
+
             margin-bottom: 40px;
         }
 
-        /* BUTTON */
+
+        /* =========================
+           BOTONES
+        ========================= */
 
         .button {
             display: inline-block;
@@ -115,337 +215,655 @@
             padding: 14px 28px;
 
             background: #e5e5e5;
+
             color: #555555;
 
             text-decoration: none;
 
             font-size: 13px;
+
             font-weight: 700;
+
             letter-spacing: 1px;
 
             border-radius: 4px;
 
-            transition: 0.3s;
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease,
+                color 0.3s ease;
         }
 
         .button:hover {
-            transform: translateY(-3px);
-            background: #d5d5d5;
+
+            transform: translateY(-4px);
+
+            background: #000000;
+
+            color: #ffffff;
+
         }
 
-        /* SECTIONS */
+
+        /* =========================
+           SECCIONES
+        ========================= */
 
         section {
-            padding: 110px 7%;
+            padding: 120px 7%;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+
+            margin-bottom: 65px;
         }
 
         .section-title span {
+
             display: block;
+
             color: #777777;
-            font-size: 11px;
+
+            font-size: 10px;
+
             letter-spacing: 4px;
+
             text-transform: uppercase;
+
             margin-bottom: 12px;
+
         }
 
         .section-title h2 {
+
             font-size: clamp(32px, 5vw, 55px);
+
             letter-spacing: -1px;
+
             color: #000000;
+
         }
 
-        /* PRODUCTO PRINCIPAL */
+
+        /* =========================
+           TECHNOLOGY REDEFINED
+        ========================= */
+
+        .redefined {
+
+            text-align: center;
+
+            border-top: 1px solid #dddddd;
+
+            border-bottom: 1px solid #dddddd;
+
+        }
+
+        .redefined-content {
+
+            max-width: 800px;
+
+            margin: auto;
+
+        }
+
+        .redefined h2 {
+
+            font-size: clamp(45px, 8vw, 90px);
+
+            letter-spacing: -4px;
+
+            line-height: 0.95;
+
+            margin-bottom: 30px;
+
+        }
+
+        .redefined p {
+
+            max-width: 550px;
+
+            margin: auto;
+
+            color: #777777;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =========================
+           PRODUCTO DESTACADO
+        ========================= */
 
         .featured {
+
             width: 100%;
+
             max-width: 1100px;
+
             margin: auto;
 
             display: grid;
+
             grid-template-columns: 1fr 1fr;
 
             background: #f5f5f5;
 
             border: 1px solid #dddddd;
+
             border-radius: 18px;
 
             overflow: hidden;
+
+            transition: transform 0.4s ease;
+
+        }
+
+        .featured:hover {
+
+            transform: translateY(-5px);
+
         }
 
         .product-image {
+
             min-height: 480px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             background: #eeeeee;
 
-            font-size: 100px;
+            color: #999999;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
         }
 
         .product-info {
+
             padding: 55px;
 
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
+
         }
 
         .product-info small {
+
             color: #777777;
+
             text-transform: uppercase;
+
             letter-spacing: 3px;
+
             font-size: 10px;
+
         }
 
         .product-info h3 {
-            font-size: 40px;
+
+            font-size: 42px;
+
             margin: 15px 0;
+
             color: #000000;
+
         }
 
         .product-info p {
+
             color: #666666;
+
             margin-bottom: 28px;
+
         }
 
         .status {
+
             display: inline-block;
+
             width: fit-content;
 
             border: 1px solid #cccccc;
+
             padding: 7px 12px;
 
             color: #555555;
 
             font-size: 11px;
+
             text-transform: uppercase;
+
             letter-spacing: 2px;
 
             margin-bottom: 25px;
+
         }
 
-        /* PRODUCTOS PRÓXIMAMENTE */
+
+        /* =========================
+           PRODUCTOS BLOQUEADOS
+        ========================= */
 
         .products-grid {
+
             width: 100%;
+
             max-width: 1200px;
+
             margin: auto;
 
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
 
             gap: 18px;
+
         }
 
         .product-card {
+
             position: relative;
 
-            min-height: 300px;
+            min-height: 320px;
 
             background: #f7f7f7;
 
             border: 1px solid #dddddd;
+
             border-radius: 14px;
 
             padding: 25px;
 
             display: flex;
+
             flex-direction: column;
+
             justify-content: flex-end;
 
             overflow: hidden;
 
-            transition: 0.3s;
+            transition:
+
+                transform 0.3s ease,
+
+                border-color 0.3s ease;
+
         }
 
         .product-card:hover {
-            transform: translateY(-5px);
-            border-color: #aaaaaa;
+
+            transform: translateY(-6px);
+
+            border-color: #999999;
+
         }
 
         .card-icon {
+
             position: absolute;
 
-            top: 45%;
+            top: 42%;
+
             left: 50%;
 
             transform: translate(-50%, -50%);
 
-            font-size: 65px;
+            font-size: 60px;
 
             filter: grayscale(1);
-            opacity: 0.45;
+
+            opacity: 0.3;
+
         }
 
         .lock {
+
             position: absolute;
+
             top: 18px;
+
             right: 18px;
 
             font-size: 13px;
+
             color: #777777;
+
         }
 
         .product-card h3 {
+
             font-size: 20px;
+
             margin-bottom: 5px;
+
             color: #000000;
+
         }
 
         .product-card p {
+
             color: #777777;
+
             font-size: 12px;
+
         }
 
-        /* POR QUÉ NEXORA */
+
+        /* =========================
+           BENEFICIOS
+        ========================= */
 
         .features {
+
             width: 100%;
+
             max-width: 1100px;
+
             margin: auto;
 
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
 
             gap: 20px;
+
         }
 
         .feature {
+
             padding: 35px;
 
             background: #f7f7f7;
 
             border: 1px solid #dddddd;
+
             border-radius: 12px;
+
+            transition: transform 0.3s ease;
+
+        }
+
+        .feature:hover {
+
+            transform: translateY(-5px);
+
         }
 
         .feature-number {
+
             color: #999999;
+
             font-size: 12px;
+
             margin-bottom: 30px;
+
         }
 
         .feature h3 {
+
             font-size: 20px;
+
             margin-bottom: 10px;
-            color: #000000;
+
         }
 
         .feature p {
+
             color: #777777;
+
             font-size: 14px;
+
         }
 
-        /* INSTAGRAM */
+
+        /* =========================
+           INSTAGRAM
+        ========================= */
 
         .instagram {
+
             text-align: center;
 
             border-top: 1px solid #dddddd;
+
             border-bottom: 1px solid #dddddd;
+
         }
 
         .instagram p {
+
             color: #777777;
+
             margin: 15px auto 30px;
+
             max-width: 500px;
+
         }
 
-        /* FOOTER */
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 54px;
+
+            height: 54px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #000000;
+
+            color: #ffffff;
+
+            border-radius: 50%;
+
+            text-decoration: none;
+
+            font-size: 22px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
+            transition: transform 0.3s ease;
+
+            z-index: 900;
+
+        }
+
+        .whatsapp:hover {
+
+            transform: scale(1.08);
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
+
             padding: 50px 7%;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
 
             color: #777777;
 
             font-size: 12px;
+
         }
 
         footer strong {
+
             color: #000000;
+
             letter-spacing: 3px;
+
         }
 
-        /* CELULAR */
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
 
         @media (max-width: 800px) {
 
             header {
+
                 padding: 0 5%;
+
             }
 
             nav {
+
                 gap: 14px;
+
             }
 
             nav a {
+
                 font-size: 12px;
+
             }
 
             section {
-                padding: 80px 5%;
+
+                padding: 85px 5%;
+
+            }
+
+            .announcement {
+
+                font-size: 8px;
+
+                letter-spacing: 1px;
+
             }
 
             .featured {
+
                 grid-template-columns: 1fr;
+
             }
 
             .product-image {
+
                 min-height: 320px;
+
             }
 
             .product-info {
+
                 padding: 35px;
+
             }
 
             .products-grid {
+
                 grid-template-columns: repeat(2, 1fr);
+
             }
 
             .features {
+
                 grid-template-columns: 1fr;
+
             }
 
             footer {
+
                 flex-direction: column;
+
                 gap: 15px;
+
             }
+
         }
+
 
         @media (max-width: 500px) {
 
             .logo {
+
                 font-size: 17px;
+
                 letter-spacing: 3px;
+
             }
 
             nav a:nth-child(3) {
+
                 display: none;
+
             }
 
             .hero h1 {
+
                 letter-spacing: 5px;
+
             }
 
             .products-grid {
+
                 grid-template-columns: 1fr;
+
             }
+
+            .logo-symbol {
+
+                width: 70px;
+
+                height: 70px;
+
+            }
+
+            .whatsapp {
+
+                right: 18px;
+
+                bottom: 18px;
+
+            }
+
         }
+
     </style>
 </head>
 
+
 <body>
+
+
+    <!-- HEADER -->
 
     <header>
 
@@ -454,32 +872,92 @@
         </div>
 
         <nav>
+
             <a href="#inicio">Inicio</a>
+
             <a href="#productos">Productos</a>
+
             <a href="#contacto">Contacto</a>
+
         </nav>
 
     </header>
 
 
+    <!-- BARRA DE LANZAMIENTO -->
+
+    <div class="announcement">
+
+        NEXORA — PRIMER LANZAMIENTO · AURICULARES PRÓXIMAMENTE
+
+    </div>
+
+
+    <!-- HERO -->
+
     <section class="hero" id="inicio">
 
         <div class="hero-content">
 
+
+            <!-- ESPACIO PARA LA N -->
+
+            <div class="logo-symbol">
+
+                LOGO
+
+            </div>
+
+
             <h1>NEXORA</h1>
 
+
             <p>
+
                 Innovation of Technology
+
             </p>
 
+
             <a href="#productos" class="button">
+
                 VER PRODUCTOS
+
             </a>
 
         </div>
 
     </section>
 
+
+    <!-- TECHNOLOGY REDEFINED -->
+
+    <section class="redefined">
+
+        <div class="redefined-content">
+
+            <h2>
+
+                TECHNOLOGY,<br>
+
+                REDEFINED.
+
+            </h2>
+
+            <p>
+
+                Productos seleccionados para quienes buscan
+
+                algo más.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTO DESTACADO -->
 
     <section id="productos">
 
@@ -494,27 +972,42 @@
 
         <div class="featured">
 
+
             <div class="product-image">
-                🎧
+
+                IMAGEN DEL PRODUCTO
+
             </div>
+
 
             <div class="product-info">
 
                 <small>NEXORA AUDIO</small>
 
+
                 <h3>Auriculares</h3>
 
+
                 <div class="status">
-                    Próximamente
+
+                    PRÓXIMAMENTE
+
                 </div>
 
+
                 <p>
+
                     Nuestro primer producto está por llegar.
+
                     Tecnología, diseño y comodidad en un solo producto.
+
                 </p>
 
+
                 <a href="#contacto" class="button">
+
                     QUIERO SABER MÁS
+
                 </a>
 
             </div>
@@ -523,6 +1016,8 @@
 
     </section>
 
+
+    <!-- PRÓXIMAMENTE -->
 
     <section>
 
@@ -536,6 +1031,7 @@
 
 
         <div class="products-grid">
+
 
             <div class="product-card">
 
@@ -582,16 +1078,19 @@
 
                 <div class="card-icon">🔊</div>
 
-                <h3>Audio</h3>
+                <h3>Parlantes</h3>
 
                 <p>Disponible próximamente</p>
 
             </div>
 
+
         </div>
 
     </section>
 
+
+    <!-- BENEFICIOS -->
 
     <section>
 
@@ -606,15 +1105,27 @@
 
         <div class="features">
 
+
             <div class="feature">
 
-                <div class="feature-number">01</div>
+                <div class="feature-number">
 
-                <h3>Productos seleccionados</h3>
+                    01
+
+                </div>
+
+                <h3>
+
+                    Productos seleccionados
+
+                </h3>
 
                 <p>
+
                     Elegimos productos pensando en calidad,
+
                     diseño y utilidad.
+
                 </p>
 
             </div>
@@ -622,13 +1133,24 @@
 
             <div class="feature">
 
-                <div class="feature-number">02</div>
+                <div class="feature-number">
 
-                <h3>Experiencia</h3>
+                    02
+
+                </div>
+
+                <h3>
+
+                    Experiencia
+
+                </h3>
 
                 <p>
+
                     Queremos que comprar tecnología
+
                     también sea una buena experiencia.
+
                 </p>
 
             </div>
@@ -636,23 +1158,38 @@
 
             <div class="feature">
 
-                <div class="feature-number">03</div>
+                <div class="feature-number">
 
-                <h3>Confianza</h3>
+                    03
+
+                </div>
+
+                <h3>
+
+                    Confianza
+
+                </h3>
 
                 <p>
+
                     Atención cercana y acompañamiento
+
                     durante tu compra.
+
                 </p>
 
             </div>
+
 
         </div>
 
     </section>
 
 
+    <!-- INSTAGRAM -->
+
     <section class="instagram" id="contacto">
+
 
         <div class="section-title">
 
@@ -662,31 +1199,58 @@
 
         </div>
 
+
         <p>
+
             Descubrí nuevos lanzamientos, productos
+
             y novedades de Nexora.
+
         </p>
+
 
         <a
             href="https://www.instagram.com/nexoraa.sn/"
             target="_blank"
             class="button"
         >
+
             VER INSTAGRAM
+
         </a>
+
 
     </section>
 
+
+    <!-- WHATSAPP -->
+
+    <a
+        class="whatsapp"
+        href="#"
+        title="WhatsApp"
+    >
+
+        💬
+
+    </a>
+
+
+    <!-- FOOTER -->
 
     <footer>
 
         <strong>NEXORA</strong>
 
+
         <span>
+
             © 2026 Nexora. Todos los derechos reservados.
+
         </span>
 
     </footer>
+
 
 </body>
 </html>
