@@ -3,252 +3,717 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexora</title>
+
+    <title>Nexora | Tecnología que transforma tu experiencia</title>
+
+    <meta name="description" content="Nexora - Tecnología seleccionada para transformar tu experiencia.">
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            <body>
-
-<header>
-    <div class="logo">NEXORA</div>
-
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-</header>
-
-<section class="hero" id="inicio">
-    <div>
-        <h1>NEXORA</h1>
-        <p>Tecnología que evoluciona con vos.</p>
-        <a href="#productos" class="button">Ver catálogo</a>
-    </div>
-</section>
-
-<section class="products" id="productos">
-    <h2>Producto disponible</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <div class="image"></div>
-            <h3>Auriculares Bluetooth</h3>
-            <p class="price">Próximamente disponible</p>
-            <a href="#" class="button">Ver más</a>
-        </div>
-
-    </div>
-</section>
-
-<section class="products">
-
-    <h2>Próximamente</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <div class="image"></div>
-            <h3>Smartwatch</h3>
-            <p class="price">🔒 Próximamente</p>
-        </div>
-
-        <div class="card">
-            <div class="image"></div>
-            <h3>Teclados</h3>
-            <p class="price">🔒 Próximamente</p>
-        </div>
-
-        <div class="card">
-            <div class="image"></div>
-            <h3>Mouse Gamer</h3>
-            <p class="price">🔒 Próximamente</p>
-        </div>
-
-        <div class="card">
-            <div class="image"></div>
-            <h3>Parlantes Bluetooth</h3>
-            <p class="price">🔒 Próximamente</p>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="products">
-
-    <h2>¿Por qué elegir Nexora?</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>⚡ Calidad</h3>
-            <p>Productos seleccionados cuidadosamente.</p>
-        </div>
-
-        <div class="card">
-            <h3>🚚 Envíos</h3>
-            <p>Entregas rápidas y seguras.</p>
-        </div>
-
-        <div class="card">
-            <h3>🛡️ Garantía</h3>
-            <p>Compra con confianza.</p>
-        </div>
-
-    </div>
-
-</section>
-
-</body>
-            
-
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
+            color: #ffffff;
+            line-height: 1.5;
         }
 
+        /* ---------- HEADER ---------- */
+
         header {
-            padding: 20px 7%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 74px;
+
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #222;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            background: rgba(8, 8, 8, 0.75);
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+
+            z-index: 1000;
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 800;
+            letter-spacing: 4px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
         }
 
         nav a {
-            color: white;
+            color: #bdbdbd;
             text-decoration: none;
-            margin-left: 25px;
+            font-size: 14px;
+            transition: 0.3s;
         }
 
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* ---------- HERO ---------- */
+
         .hero {
-            min-height: 70vh;
+            min-height: 100vh;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
-            padding: 40px 20px;
+
+            padding: 120px 20px 80px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(255,255,255,0.06),
+                    transparent 42%
+                );
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .eyebrow {
+            color: #8d8d8d;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 11px;
+            margin-bottom: 24px;
         }
 
         .hero h1 {
-            font-size: clamp(45px, 8vw, 90px);
-            margin-bottom: 20px;
+            font-size: clamp(60px, 11vw, 140px);
+            letter-spacing: 10px;
+            font-weight: 800;
+            line-height: 0.95;
+            margin-bottom: 30px;
         }
 
         .hero p {
-            color: #aaa;
-            font-size: 20px;
-            margin-bottom: 30px;
+            color: #b5b5b5;
+            font-size: clamp(18px, 3vw, 25px);
+            margin-bottom: 40px;
         }
 
         .button {
             display: inline-block;
+
             padding: 14px 28px;
-            border-radius: 12px;
-            background: white;
-            color: black;
+
+            background: #ffffff;
+            color: #080808;
+
             text-decoration: none;
-            font-weight: bold;
+
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+
+            border-radius: 4px;
+
+            transition:
+                transform 0.3s,
+                box-shadow 0.3s;
         }
 
-        .products {
-            padding: 70px 7%;
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255,255,255,0.12);
         }
 
-        .products h2 {
-            font-size: 36px;
-            margin-bottom: 30px;
+        /* ---------- SECTIONS ---------- */
+
+        section {
+            padding: 110px 7%;
         }
 
-        .grid {
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title span {
+            display: block;
+            color: #777777;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(32px, 5vw, 55px);
+            letter-spacing: -1px;
+        }
+
+        /* ---------- FEATURED PRODUCT ---------- */
+
+        .featured {
+            max-width: 1100px;
+            margin: auto;
+
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: 1fr 1fr;
+
+            background: #111111;
+
+            border: 1px solid #202020;
+            border-radius: 18px;
+
+            overflow: hidden;
+        }
+
+        .product-image {
+            min-height: 480px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                radial-gradient(
+                    circle,
+                    #242424 0%,
+                    #111111 55%,
+                    #0c0c0c 100%
+                );
+
+            font-size: 100px;
+        }
+
+        .product-info {
+            padding: 55px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .product-info small {
+            color: #777777;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 10px;
+        }
+
+        .product-info h3 {
+            font-size: 40px;
+            margin: 15px 0;
+        }
+
+        .product-info p {
+            color: #999999;
+            margin-bottom: 28px;
+        }
+
+        .status {
+            display: inline-block;
+            width: fit-content;
+
+            border: 1px solid #333333;
+            padding: 7px 12px;
+
+            color: #cccccc;
+
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            margin-bottom: 25px;
+        }
+
+        /* ---------- COMING SOON ---------- */
+
+        .products-grid {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .product-card {
+            position: relative;
+
+            min-height: 300px;
+
+            background: #101010;
+
+            border: 1px solid #202020;
+            border-radius: 14px;
+
+            padding: 25px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            overflow: hidden;
+
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: #353535;
+        }
+
+        .card-icon {
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -65%);
+
+            font-size: 65px;
+
+            filter: grayscale(1);
+            opacity: 0.7;
+        }
+
+        .lock {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+
+            font-size: 13px;
+            color: #666666;
+        }
+
+        .product-card h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .product-card p {
+            color: #666666;
+            font-size: 12px;
+        }
+
+        /* ---------- WHY NEXORA ---------- */
+
+        .features {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
 
-        .card {
-            background: #151515;
-            border: 1px solid #252525;
-            border-radius: 18px;
-            padding: 20px;
+        .feature {
+            padding: 35px;
+
+            background: #0e0e0e;
+
+            border: 1px solid #1e1e1e;
+            border-radius: 12px;
         }
 
-        .card .image {
-            height: 220px;
-            background: #222;
-            border-radius: 14px;
-            margin-bottom: 18px;
+        .feature-number {
+            color: #555555;
+            font-size: 12px;
+            margin-bottom: 30px;
         }
 
-        .card h3 {
-            margin-bottom: 8px;
+        .feature h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
         }
 
-        .price {
-            color: #aaa;
-            margin-bottom: 15px;
+        .feature p {
+            color: #777777;
+            font-size: 14px;
+        }
+
+        /* ---------- INSTAGRAM ---------- */
+
+        .instagram {
+            text-align: center;
+
+            border-top: 1px solid #151515;
+            border-bottom: 1px solid #151515;
+        }
+
+        .instagram p {
+            color: #777777;
+            margin: 15px auto 30px;
+            max-width: 500px;
+        }
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            padding: 50px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            color: #555555;
+
+            font-size: 12px;
+        }
+
+        footer strong {
+            color: #ffffff;
+            letter-spacing: 3px;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+
+        @media (max-width: 800px) {
+
+            header {
+                padding: 0 5%;
+            }
+
+            nav {
+                gap: 14px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            section {
+                padding: 80px 5%;
+            }
+
+            .featured {
+                grid-template-columns: 1fr;
+            }
+
+            .product-image {
+                min-height: 320px;
+            }
+
+            .product-info {
+                padding: 35px;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .logo {
+                font-size: 17px;
+                letter-spacing: 3px;
+            }
+
+            nav a:nth-child(3) {
+                display: none;
+            }
+
+            .hero h1 {
+                letter-spacing: 5px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">NEXORA</div>
+    <!-- HEADER -->
 
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-</header>
+    <header>
 
-<section class="hero">
-    <div>
-        <h1>NEXORA</h1>
-        <p>Tecnología que transforma tu experiencia.</p>
-        <a href="#productos" class="button">Ver productos</a>
-    </div>
-</section>
-
-<section class="products" id="productos">
-    <h2>Productos destacados</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <div class="image"></div>
-            <h3>Producto 1</h3>
-            <p class="price">$0</p>
-            <a href="#" class="button">Comprar</a>
+        <div class="logo">
+            NEXORA
         </div>
 
-        <div class="card">
-            <div class="image"></div>
-            <h3>Producto 2</h3>
-            <p class="price">$0</p>
-            <a href="#" class="button">Comprar</a>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Tecnología • Diseño • Experiencia
+            </div>
+
+            <h1>NEXORA</h1>
+
+            <p>
+                Tecnología que transforma tu experiencia.
+            </p>
+
+            <a href="#productos" class="button">
+                VER PRODUCTOS
+            </a>
+
         </div>
 
-        <div class="card">
-            <div class="image"></div>
-            <h3>Producto 3</h3>
-            <p class="price">$0</p>
-            <a href="#" class="button">Comprar</a>
+    </section>
+
+
+    <!-- PRODUCTO DESTACADO -->
+
+    <section id="productos">
+
+        <div class="section-title">
+
+            <span>Primer lanzamiento</span>
+
+            <h2>Producto destacado</h2>
+
         </div>
 
-    </div>
-</section>
+
+        <div class="featured">
+
+            <div class="product-image">
+                🎧
+            </div>
+
+
+            <div class="product-info">
+
+                <small>NEXORA AUDIO</small>
+
+                <h3>Auriculares</h3>
+
+                <div class="status">
+                    Próximamente
+                </div>
+
+                <p>
+                    Nuestro primer producto está por llegar.
+                    Tecnología, diseño y comodidad en un solo producto.
+                </p>
+
+                <a href="#contacto" class="button">
+                    QUIERO SABER MÁS
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRÓXIMAMENTE -->
+
+    <section>
+
+        <div class="section-title">
+
+            <span>El futuro de Nexora</span>
+
+            <h2>Próximamente</h2>
+
+        </div>
+
+
+        <div class="products-grid">
+
+            <div class="product-card">
+
+                <span class="lock">🔒</span>
+
+                <div class="card-icon">⌚</div>
+
+                <h3>Smartwatch</h3>
+
+                <p>Disponible próximamente</p>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <span class="lock">🔒</span>
+
+                <div class="card-icon">⌨️</div>
+
+                <h3>Teclados</h3>
+
+                <p>Disponible próximamente</p>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <span class="lock">🔒</span>
+
+                <div class="card-icon">🖱️</div>
+
+                <h3>Mouse</h3>
+
+                <p>Disponible próximamente</p>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <span class="lock">🔒</span>
+
+                <div class="card-icon">🔊</div>
+
+                <h3>Audio</h3>
+
+                <p>Disponible próximamente</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- POR QUÉ NEXORA -->
+
+    <section>
+
+        <div class="section-title">
+
+            <span>La experiencia Nexora</span>
+
+            <h2>Más que tecnología.</h2>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="feature-number">01</div>
+
+                <h3>Productos seleccionados</h3>
+
+                <p>
+                    Elegimos productos pensando en calidad,
+                    diseño y utilidad.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">02</div>
+
+                <h3>Experiencia</h3>
+
+                <p>
+                    Queremos que comprar tecnología
+                    también sea una buena experiencia.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">03</div>
+
+                <h3>Confianza</h3>
+
+                <p>
+                    Atención cercana y acompañamiento
+                    durante tu compra.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INSTAGRAM / CONTACTO -->
+
+    <section class="instagram" id="contacto">
+
+        <div class="section-title">
+
+            <span>Seguinos</span>
+
+            <h2>@nexoraa.sn</h2>
+
+        </div>
+
+        <p>
+            Descubrí nuevos lanzamientos, productos
+            y novedades de Nexora.
+        </p>
+
+        <a
+            href="https://www.instagram.com/nexoraa.sn/"
+            target="_blank"
+            class="button"
+        >
+            VER INSTAGRAM
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <strong>NEXORA</strong>
+
+        <span>
+            © 2026 Nexora. Todos los derechos reservados.
+        </span>
+
+    </footer>
+
 
 </body>
 </html>
