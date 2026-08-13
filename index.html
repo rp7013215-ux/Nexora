@@ -404,7 +404,7 @@
         }
 
         /* =========================
-           PRODUCTOS BLOQUEADOS
+           PRODUCTOS PRÓXIMAMENTE
         ========================= */
 
         .products-grid {
@@ -496,12 +496,41 @@
         }
 
         /* =========================
-           BENEFICIOS
+           EXPERIENCIA NEXORA
         ========================= */
 
-        .features {
-            width: 100%;
+        .experience {
+            position: relative;
 
+            overflow: hidden;
+        }
+
+        .experience::before {
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            top: 10%;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            background: radial-gradient(
+                circle,
+                rgba(52,120,246,0.04),
+                transparent 70%
+            );
+
+            pointer-events: none;
+        }
+
+        .features {
+            position: relative;
+
+            width: 100%;
             max-width: 1100px;
 
             margin: auto;
@@ -514,39 +543,106 @@
         }
 
         .feature {
-            padding: 35px;
+            position: relative;
 
-            background: #f7f7f7;
+            padding: 38px;
 
-            border: 1px solid #dddddd;
+            min-height: 300px;
 
-            border-radius: 12px;
+            background: rgba(248,248,248,0.8);
 
-            transition: transform 0.3s ease;
+            border: 1px solid #e1e1e1;
+
+            border-radius: 16px;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.35s ease,
+                border-color 0.35s ease,
+                box-shadow 0.35s ease;
         }
 
         .feature:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+
+            border-color: #cccccc;
+
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
         }
 
-        .feature-number {
-            color: #999999;
+        .feature::after {
+            content: "";
 
-            font-size: 12px;
+            position: absolute;
 
-            margin-bottom: 30px;
+            width: 140px;
+            height: 140px;
+
+            right: -60px;
+            top: -60px;
+
+            border-radius: 50%;
+
+            opacity: 0.12;
+
+            transition: transform 0.4s ease;
+        }
+
+        .feature:hover::after {
+            transform: scale(1.5);
+        }
+
+        .innovation::after {
+            background: #3478F6;
+        }
+
+        .quality::after {
+            background: #8A5CF6;
+        }
+
+        .trust::after {
+            background: #25B875;
+        }
+
+        .feature-icon {
+            width: 54px;
+            height: 54px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 45px;
+
+            border-radius: 14px;
+
+            background: #ffffff;
+
+            border: 1px solid #e5e5e5;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon svg {
+            width: 27px;
+            height: 27px;
         }
 
         .feature h3 {
-            font-size: 20px;
+            font-size: 23px;
 
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+
+            color: #000000;
         }
 
         .feature p {
             color: #777777;
 
             font-size: 14px;
+
+            max-width: 270px;
         }
 
         /* =========================
@@ -1055,9 +1151,9 @@
     </section>
 
 
-    <!-- BENEFICIOS -->
+    <!-- EXPERIENCIA NEXORA -->
 
-    <section>
+    <section class="experience">
 
         <div class="section-title">
 
@@ -1071,10 +1167,24 @@
         <div class="features">
 
 
-            <div class="feature">
+            <!-- INNOVACIÓN -->
 
-                <div class="feature-number">
-                    01
+            <div class="feature innovation">
+
+                <div class="feature-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none">
+
+                        <path
+                            d="M13 2L4 14H11L10 22L20 9H13L13 2Z"
+                            stroke="#3478F6"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+
+                    </svg>
+
                 </div>
 
                 <h3>
@@ -1090,10 +1200,23 @@
             </div>
 
 
-            <div class="feature">
+            <!-- CALIDAD -->
 
-                <div class="feature-number">
-                    02
+            <div class="feature quality">
+
+                <div class="feature-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none">
+
+                        <path
+                            d="M12 3L14.7 8.3L20.6 9.2L16.3 13.3L17.3 19.2L12 16.4L6.7 19.2L7.7 13.3L3.4 9.2L9.3 8.3L12 3Z"
+                            stroke="#8A5CF6"
+                            stroke-width="1.7"
+                            stroke-linejoin="round"
+                        />
+
+                    </svg>
+
                 </div>
 
                 <h3>
@@ -1108,10 +1231,31 @@
             </div>
 
 
-            <div class="feature">
+            <!-- CONFIANZA -->
 
-                <div class="feature-number">
-                    03
+            <div class="feature trust">
+
+                <div class="feature-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none">
+
+                        <path
+                            d="M12 3L19 6V11C19 15.5 16.1 19.2 12 21C7.9 19.2 5 15.5 5 11V6L12 3Z"
+                            stroke="#25B875"
+                            stroke-width="1.7"
+                            stroke-linejoin="round"
+                        />
+
+                        <path
+                            d="M9 12L11 14L15 10"
+                            stroke="#25B875"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+
+                    </svg>
+
                 </div>
 
                 <h3>
@@ -1199,23 +1343,38 @@
 
                         <defs>
 
-                            <linearGradient id="instagramGradient"
+                            <linearGradient
+                                id="instagramGradient"
                                 x1="0%"
                                 y1="100%"
                                 x2="100%"
-                                y2="0%">
+                                y2="0%"
+                            >
 
-                                <stop offset="0%" stop-color="#F58529"/>
+                                <stop
+                                    offset="0%"
+                                    stop-color="#F58529"
+                                />
 
-                                <stop offset="45%" stop-color="#DD2A7B"/>
+                                <stop
+                                    offset="45%"
+                                    stop-color="#DD2A7B"
+                                />
 
-                                <stop offset="75%" stop-color="#8134AF"/>
+                                <stop
+                                    offset="75%"
+                                    stop-color="#8134AF"
+                                />
 
-                                <stop offset="100%" stop-color="#515BD4"/>
+                                <stop
+                                    offset="100%"
+                                    stop-color="#515BD4"
+                                />
 
                             </linearGradient>
 
                         </defs>
+
 
                         <rect
                             x="3"
@@ -1228,6 +1387,7 @@
                             stroke-width="2"
                         />
 
+
                         <circle
                             cx="12"
                             cy="12"
@@ -1236,6 +1396,7 @@
                             stroke="url(#instagramGradient)"
                             stroke-width="2"
                         />
+
 
                         <circle
                             cx="17.5"
