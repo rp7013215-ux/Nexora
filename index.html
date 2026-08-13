@@ -6,7 +6,7 @@
 
     <title>Nexora | Innovation of Technology</title>
 
-    <meta name="description" content="Nexora — Innovation of Technology. Tecnología, calidad y confianza.">
+    <meta name="description" content="Nexora — Innovation of Technology. Innovación, calidad y confianza.">
 
     <style>
 
@@ -31,7 +31,6 @@
         a {
             color: inherit;
         }
-
 
         /* =========================
            HEADER
@@ -82,17 +81,14 @@
             color: #000000;
         }
 
-
         /* =========================
            BARRA SUPERIOR
         ========================= */
 
         .announcement {
             position: fixed;
-
             top: 74px;
             left: 0;
-
             width: 100%;
 
             background: #000000;
@@ -108,7 +104,6 @@
 
             z-index: 999;
         }
-
 
         /* =========================
            HERO
@@ -136,7 +131,6 @@
         }
 
         @keyframes heroAppear {
-
             from {
                 opacity: 0;
                 transform: translateY(25px);
@@ -146,7 +140,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-
         }
 
         .logo-symbol {
@@ -195,7 +188,6 @@
             margin-bottom: 40px;
         }
 
-
         /* =========================
            BOTONES
         ========================= */
@@ -233,7 +225,6 @@
             color: #ffffff;
         }
 
-
         /* =========================
            SECCIONES
         ========================= */
@@ -244,6 +235,7 @@
 
         .section-title {
             text-align: center;
+
             margin-bottom: 65px;
         }
 
@@ -269,7 +261,6 @@
             color: #000000;
         }
 
-
         /* =========================
            TECHNOLOGY REDEFINED
         ========================= */
@@ -284,6 +275,7 @@
 
         .redefined-content {
             max-width: 800px;
+
             margin: auto;
         }
 
@@ -306,7 +298,6 @@
 
             font-size: 16px;
         }
-
 
         /* =========================
            PRODUCTO DESTACADO
@@ -412,7 +403,6 @@
             margin-bottom: 25px;
         }
 
-
         /* =========================
            PRODUCTOS BLOQUEADOS
         ========================= */
@@ -505,7 +495,6 @@
             font-size: 12px;
         }
 
-
         /* =========================
            BENEFICIOS
         ========================= */
@@ -560,12 +549,11 @@
             font-size: 14px;
         }
 
-
         /* =========================
-           INSTAGRAM
+           CONTACTO
         ========================= */
 
-        .instagram {
+        .contact-section {
             text-align: center;
 
             border-top: 1px solid #dddddd;
@@ -573,17 +561,109 @@
             border-bottom: 1px solid #dddddd;
         }
 
-        .instagram p {
+        .contact-section > p {
             color: #777777;
 
-            margin: 15px auto 30px;
+            margin: -35px auto 45px;
 
             max-width: 500px;
         }
 
+        .contact-options {
+            width: 100%;
+
+            max-width: 950px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+        }
+
+        .contact-card {
+            position: relative;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-start;
+
+            text-align: left;
+
+            padding: 30px;
+
+            min-height: 180px;
+
+            background: #f7f7f7;
+
+            border: 1px solid #dddddd;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+
+            color: #000000;
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-6px);
+
+            background: #eeeeee;
+
+            border-color: #999999;
+        }
+
+        .contact-icon {
+            font-size: 24px;
+
+            margin-bottom: 25px;
+        }
+
+        .contact-card strong {
+            font-size: 18px;
+
+            margin-bottom: 5px;
+        }
+
+        .contact-card small {
+            color: #777777;
+
+            font-size: 12px;
+        }
+
+        .contact-arrow {
+            position: absolute;
+
+            top: 25px;
+
+            right: 25px;
+
+            font-size: 18px;
+
+            color: #777777;
+
+            transition:
+                transform 0.3s ease,
+                color 0.3s ease;
+        }
+
+        .contact-card:hover .contact-arrow {
+            transform: translate(3px, -3px);
+
+            color: #000000;
+        }
 
         /* =========================
-           WHATSAPP
+           WHATSAPP FLOTANTE
         ========================= */
 
         .whatsapp {
@@ -624,7 +704,6 @@
             transform: scale(1.08);
         }
 
-
         /* =========================
            FOOTER
         ========================= */
@@ -648,7 +727,6 @@
 
             letter-spacing: 3px;
         }
-
 
         /* =========================
            RESPONSIVE
@@ -698,13 +776,16 @@
                 grid-template-columns: 1fr;
             }
 
+            .contact-options {
+                grid-template-columns: 1fr;
+            }
+
             footer {
                 flex-direction: column;
 
                 gap: 15px;
             }
         }
-
 
         @media (max-width: 500px) {
 
@@ -742,9 +823,7 @@
     </style>
 </head>
 
-
 <body>
-
 
     <!-- HEADER -->
 
@@ -857,19 +936,14 @@
                 </div>
 
                 <p>
-
                     Nuestro primer producto ya llegó.
-
                     El primer lanzamiento de Nexora fue un éxito
-
                     y actualmente estamos preparando nuevo stock.
-
                 </p>
 
-                <!-- ESTE BOTÓN ABRE WHATSAPP -->
 
                 <a
-                    href="https://wa.me/3364187084"
+                    href="https://wa.me/5493364187084"
                     target="_blank"
                     class="button"
                 >
@@ -1042,53 +1116,117 @@
     </section>
 
 
-    <!-- INSTAGRAM -->
+    <!-- CONTACTO -->
 
-    <section class="instagram" id="contacto">
+    <section class="contact-section" id="contacto">
 
         <div class="section-title">
 
-            <span>Seguinos</span>
+            <span>Contacto</span>
 
-            <h2>@nexoraa.sn</h2>
+            <h2>Hablá con nosotros.</h2>
 
         </div>
 
 
         <p>
-            Descubrí nuevos lanzamientos,
-            productos y novedades de Nexora.
+            Estamos para ayudarte. Elegí cómo querés contactarnos.
         </p>
 
 
-        <a
-            href="https://www.instagram.com/nexoraa.sn/"
-            target="_blank"
-            class="button"
-        >
+        <div class="contact-options">
 
-            VER INSTAGRAM
 
-        </a>
+            <!-- WHATSAPP -->
+
+            <a
+                href="https://wa.me/5493364187084"
+                target="_blank"
+                class="contact-card"
+            >
+
+                <span class="contact-icon">
+                    💬
+                </span>
+
+                <strong>
+                    WhatsApp
+                </strong>
+
+                <small>
+                    Consultanos directamente
+                </small>
+
+                <span class="contact-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+                href="https://www.instagram.com/nexoraa.sn/"
+                target="_blank"
+                class="contact-card"
+            >
+
+                <span class="contact-icon">
+                    ◎
+                </span>
+
+                <strong>
+                    Instagram
+                </strong>
+
+                <small>
+                    @nexoraa.sn
+                </small>
+
+                <span class="contact-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <!-- EMAIL -->
+
+            <a
+                href="mailto:nexoraasn@gmail.com"
+                class="contact-card"
+            >
+
+                <span class="contact-icon">
+                    ✉
+                </span>
+
+                <strong>
+                    Email
+                </strong>
+
+                <small>
+                    nexoraasn@gmail.com
+                </small>
+
+                <span class="contact-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+        </div>
 
     </section>
 
 
-    <!-- WHATSAPP -->
-
-    <!--
-        IMPORTANTE:
-        Reemplazá TU_NUMERO por tu número de WhatsApp.
-
-        Ejemplo:
-        https://wa.me/549XXXXXXXXXX
-
-        Sin +, espacios ni guiones.
-    -->
+    <!-- WHATSAPP FLOTANTE -->
 
     <a
         class="whatsapp"
-        href="https://wa.me/3364187084"
+        href="https://wa.me/5493364187084"
         target="_blank"
         title="Contactar por WhatsApp"
     >
@@ -1102,14 +1240,15 @@
 
     <footer>
 
-        <strong>NEXORA</strong>
+        <strong>
+            NEXORA
+        </strong>
 
         <span>
             © 2026 Nexora. Todos los derechos reservados.
         </span>
 
     </footer>
-
 
 </body>
 </html>
