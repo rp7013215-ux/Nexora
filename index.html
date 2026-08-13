@@ -81,15 +81,11 @@ nav a:hover{
 nav a::after{
     content:"";
     position:absolute;
-
     left:0;
     bottom:-7px;
-
     width:0;
     height:2px;
-
     background:#3478F6;
-
     transition:.3s;
 }
 
@@ -104,10 +100,8 @@ nav a:hover::after{
 
 .announcement{
     position:fixed;
-
     top:72px;
     left:0;
-
     width:100%;
 
     padding:9px;
@@ -209,7 +203,6 @@ nav a:hover::after{
 }
 
 @keyframes appear{
-
     from{
         opacity:0;
         transform:translateY(25px);
@@ -219,7 +212,6 @@ nav a:hover::after{
         opacity:1;
         transform:translateY(0);
     }
-
 }
 
 .logo-symbol{
@@ -372,7 +364,6 @@ section{
 
 .section-title{
     text-align:center;
-
     margin-bottom:65px;
 }
 
@@ -509,7 +500,7 @@ section{
 }
 
 .redefined-description{
-    max-width:570px;
+    max-width:700px;
 
     margin:auto;
 
@@ -518,6 +509,16 @@ section{
     font-size:16px;
 
     line-height:1.8;
+
+    word-spacing:2px;
+}
+
+.redefined-description span{
+    margin:0 8px;
+
+    color:#3478F6;
+
+    font-weight:bold;
 }
 
 .redefined-line{
@@ -527,7 +528,7 @@ section{
 
     height:1px;
 
-    margin:40px auto 25px;
+    margin:40px auto 0;
 
     background:linear-gradient(
         90deg,
@@ -539,14 +540,6 @@ section{
     );
 }
 
-.redefined-mini{
-    font-size:9px;
-
-    letter-spacing:3px;
-
-    color:#999;
-}
-
 
 /* =========================
    PRODUCTO DESTACADO
@@ -556,28 +549,17 @@ section{
     position:relative;
 }
 
-.product-section::after{
-    content:"01";
-
-    position:absolute;
-
-    right:7%;
-    top:90px;
-
-    font-size:80px;
-
-    font-weight:800;
-
-    color:#f3f3f3;
-
-    z-index:-1;
-}
-
 .product-label{
-    display:inline-flex;
+    display:flex;
 
     align-items:center;
+    justify-content:center;
+
     gap:8px;
+
+    width:max-content;
+
+    margin:0 auto 16px;
 
     padding:8px 14px;
 
@@ -590,8 +572,6 @@ section{
     letter-spacing:3px;
 
     color:#555;
-
-    margin-bottom:16px;
 }
 
 .product-label::before{
@@ -1058,15 +1038,19 @@ section{
 }
 
 
-/* WHATSAPP OUTLINE */
+/* =========================
+   WHATSAPP - CONTORNO
+========================= */
 
 .whatsapp-outline{
-    width:28px;
-    height:28px;
+    width:30px;
+    height:30px;
 
     border:2px solid #128C4B;
 
     border-radius:50%;
+
+    position:relative;
 
     display:flex;
 
@@ -1075,18 +1059,53 @@ section{
 
     color:#128C4B;
 
-    font-size:14px;
-
     box-shadow:
-        0 0 12px rgba(18,140,75,.25);
+        0 0 14px rgba(18,140,75,.22);
+}
+
+.whatsapp-outline::before{
+    content:"";
+
+    position:absolute;
+
+    width:13px;
+    height:13px;
+
+    border:2px solid #128C4B;
+
+    border-radius:50%;
+
+    top:6px;
+    left:6px;
+}
+
+.whatsapp-outline::after{
+    content:"";
+
+    position:absolute;
+
+    width:6px;
+    height:3px;
+
+    border-left:2px solid #128C4B;
+    border-bottom:2px solid #128C4B;
+
+    transform:rotate(-35deg);
+
+    bottom:3px;
+    left:2px;
+
+    background:#f7f7f7;
 }
 
 
-/* INSTAGRAM OUTLINE */
+/* =========================
+   INSTAGRAM - CONTORNO
+========================= */
 
 .instagram-outline{
-    width:28px;
-    height:28px;
+    width:30px;
+    height:30px;
 
     border:2px solid #C13584;
 
@@ -1103,15 +1122,15 @@ section{
 
     position:absolute;
 
-    width:9px;
-    height:9px;
+    width:10px;
+    height:10px;
 
     border:2px solid #E1306C;
 
     border-radius:50%;
 
-    top:7px;
-    left:7px;
+    top:6px;
+    left:6px;
 }
 
 .instagram-outline::after{
@@ -1131,11 +1150,13 @@ section{
 }
 
 
-/* EMAIL */
+/* =========================
+   EMAIL - CONTORNO
+========================= */
 
 .email-outline{
-    width:29px;
-    height:21px;
+    width:31px;
+    height:23px;
 
     border:2px solid #4DA6D9;
 
@@ -1143,8 +1164,32 @@ section{
 
     position:relative;
 
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
     box-shadow:
         0 0 12px rgba(77,166,217,.2);
+
+    overflow:hidden;
+}
+
+.email-outline::before{
+    content:"";
+
+    position:absolute;
+
+    width:17px;
+    height:17px;
+
+    border-left:2px solid #4DA6D9;
+    border-bottom:2px solid #4DA6D9;
+
+    transform:rotate(-45deg);
+
+    top:-8px;
+    left:5px;
 }
 
 .email-outline::after{
@@ -1152,16 +1197,16 @@ section{
 
     position:absolute;
 
-    width:13px;
-    height:13px;
+    width:17px;
+    height:17px;
 
-    border-left:2px solid #4DA6D9;
+    border-right:2px solid #4DA6D9;
     border-bottom:2px solid #4DA6D9;
 
-    transform:rotate(-45deg);
+    transform:rotate(45deg);
 
-    top:-1px;
-    left:6px;
+    top:-8px;
+    right:5px;
 }
 
 .contact-card strong{
@@ -1233,11 +1278,6 @@ section{
 
     box-shadow:
         0 10px 30px rgba(18,140,75,.25);
-}
-
-.whatsapp .whatsapp-outline{
-    width:27px;
-    height:27px;
 }
 
 
@@ -1361,9 +1401,7 @@ footer strong{
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -1373,26 +1411,18 @@ footer strong{
 
     <nav>
 
-        <a href="#inicio">
-            Inicio
-        </a>
+        <a href="#inicio">Inicio</a>
 
-        <a href="#productos">
-            Productos
-        </a>
+        <a href="#productos">Productos</a>
 
-        <a href="#contacto">
-            Contacto
-        </a>
+        <a href="#contacto">Contacto</a>
 
     </nav>
 
 </header>
 
 
-<!-- =========================
-     BARRA SUPERIOR
-========================= -->
+<!-- BARRA SUPERIOR -->
 
 <div class="announcement">
 
@@ -1412,14 +1442,9 @@ footer strong{
 </div>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
-<section
-    class="hero"
-    id="inicio"
->
+<section class="hero" id="inicio">
 
     <div class="hero-content">
 
@@ -1447,9 +1472,7 @@ footer strong{
 </section>
 
 
-<!-- =========================
-     TECHNOLOGY REDEFINED
-========================= -->
+<!-- TECHNOLOGY REDEFINED -->
 
 <section class="redefined">
 
@@ -1466,28 +1489,26 @@ footer strong{
 
         <p class="redefined-description">
 
-            Tecnología seleccionada.
-            Diseño pensado.
-            Experiencias que conectan.
+            Tecnología seleccionada
+
+            <span>·</span>
+
+            Diseño pensado
+
+            <span>·</span>
+
+            Experiencias que conectan
 
         </p>
 
         <div class="redefined-line"></div>
-
-        <p class="redefined-mini">
-
-            INNOVATION · QUALITY · TRUST
-
-        </p>
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     PRODUCTO DESTACADO
-========================= -->
+<!-- PRODUCTO DESTACADO -->
 
 <section
     id="productos"
@@ -1512,7 +1533,6 @@ footer strong{
 
 
     <div class="featured">
-
 
         <div class="product-image">
 
@@ -1551,15 +1571,12 @@ footer strong{
 
         </div>
 
-
     </div>
 
 </section>
 
 
-<!-- =========================
-     PRÓXIMAMENTE
-========================= -->
+<!-- PRÓXIMAMENTE -->
 
 <section>
 
@@ -1581,9 +1598,7 @@ footer strong{
 
         <div class="product-card">
 
-            <span class="lock">
-                🔒
-            </span>
+            <span class="lock">🔒</span>
 
             <div class="card-icon">
                 ⌚
@@ -1602,9 +1617,7 @@ footer strong{
 
         <div class="product-card">
 
-            <span class="lock">
-                🔒
-            </span>
+            <span class="lock">🔒</span>
 
             <div class="card-icon">
                 ⌨
@@ -1623,9 +1636,7 @@ footer strong{
 
         <div class="product-card">
 
-            <span class="lock">
-                🔒
-            </span>
+            <span class="lock">🔒</span>
 
             <div class="card-icon">
                 🖱
@@ -1644,9 +1655,7 @@ footer strong{
 
         <div class="product-card">
 
-            <span class="lock">
-                🔒
-            </span>
+            <span class="lock">🔒</span>
 
             <div class="card-icon">
                 🔊
@@ -1668,9 +1677,7 @@ footer strong{
 </section>
 
 
-<!-- =========================
-     MÁS QUE TECNOLOGÍA
-========================= -->
+<!-- MÁS QUE TECNOLOGÍA -->
 
 <section class="experience">
 
@@ -1807,9 +1814,7 @@ footer strong{
 </section>
 
 
-<!-- =========================
-     CONTACTO
-========================= -->
+<!-- CONTACTO -->
 
 <section
     class="contact-section"
@@ -1848,9 +1853,7 @@ footer strong{
 
             <div class="contact-icon">
 
-                <div class="whatsapp-outline">
-                    ◔
-                </div>
+                <div class="whatsapp-outline"></div>
 
             </div>
 
@@ -1931,26 +1934,21 @@ footer strong{
 </section>
 
 
-<!-- =========================
-     WHATSAPP FLOTANTE
-========================= -->
+<!-- WHATSAPP FLOTANTE -->
 
 <a
     href="https://wa.me/5493364187084"
     target="_blank"
     class="whatsapp"
+    title="Contactar por WhatsApp"
 >
 
-    <div class="whatsapp-outline">
-        ◔
-    </div>
+    <div class="whatsapp-outline"></div>
 
 </a>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
