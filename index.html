@@ -176,25 +176,6 @@ nav a:hover::after{
     pointer-events:none;
 }
 
-.hero::after{
-    content:"";
-
-    position:absolute;
-
-    width:180px;
-    height:180px;
-
-    right:5%;
-    bottom:12%;
-
-    border-radius:50%;
-
-    border:1px solid rgba(138,92,246,.15);
-
-    box-shadow:
-        0 0 60px rgba(138,92,246,.05);
-}
-
 .hero-content{
     position:relative;
     z-index:2;
@@ -1039,7 +1020,7 @@ section{
 
 
 /* =========================
-   WHATSAPP - CONTORNO
+   WHATSAPP - CONTORNO NUEVO
 ========================= */
 
 .whatsapp-outline{
@@ -1053,7 +1034,6 @@ section{
     position:relative;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
@@ -1063,44 +1043,48 @@ section{
         0 0 14px rgba(18,140,75,.22);
 }
 
+/* Cola de la burbuja */
+
 .whatsapp-outline::before{
     content:"";
 
     position:absolute;
 
-    width:13px;
-    height:13px;
+    width:7px;
+    height:7px;
 
-    border:2px solid #128C4B;
-
-    border-radius:50%;
-
-    top:6px;
-    left:6px;
-}
-
-.whatsapp-outline::after{
-    content:"";
-
-    position:absolute;
-
-    width:6px;
-    height:3px;
+    left:0;
+    bottom:0;
 
     border-left:2px solid #128C4B;
     border-bottom:2px solid #128C4B;
 
-    transform:rotate(-35deg);
-
-    bottom:3px;
-    left:2px;
+    transform:skew(-25deg) rotate(-20deg);
 
     background:#f7f7f7;
 }
 
+/* Teléfono */
+
+.whatsapp-outline::after{
+    content:"☎";
+
+    position:absolute;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    color:#128C4B;
+
+    transform:rotate(-18deg);
+
+    line-height:1;
+}
+
 
 /* =========================
-   INSTAGRAM - CONTORNO
+   INSTAGRAM
 ========================= */
 
 .instagram-outline{
@@ -1151,7 +1135,7 @@ section{
 
 
 /* =========================
-   EMAIL - CONTORNO
+   EMAIL
 ========================= */
 
 .email-outline{
